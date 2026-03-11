@@ -1,0 +1,17 @@
+[package]
+name = "shm-ring"
+version = "0.1.0"
+edition = "2021"
+description = "Lock-free shared memory SPSC ring buffer for Linux/POSIX using shm_open + mmap"
+license = "MIT"
+
+[dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+loom = "0.7"
+criterion = "0.5"
+
+[[bench]]
+name = "throughput"
+harness = false
